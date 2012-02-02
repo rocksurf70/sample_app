@@ -1,0 +1,20 @@
+
+---
+users:
+  columns:
+  - id
+  - name
+  - email
+  - created_at
+  - updated_at
+  records: 
+  - - 590306657
+    - Paul Palmer
+    - a@b.com
+    - '2012-01-31 04:09:58'
+    - '2012-01-31 04:09:58'
+  - - 975572189
+    - Simon Carter
+    - b@c.com
+    - '2012-01-31 04:09:58'
+    - '2012-01-31 04:09:58'
