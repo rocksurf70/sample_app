@@ -1,35 +1,12 @@
 class User < ActiveRecord::Base
-  attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
+  has_secure_password
 
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :name, presence: true, length: { maximum: 50 }
+  validates :email, presence: true
+  validates :password, presence: true
 
-  validates :name, :presence => true,
-            :length => { :maximum => 50 }
-  validates :email, :presence => true,
-            :format => { :with => email_regex },
-            :uniqueness => { :case_sensitive => false }
-
-  validates :password, :presence => true,
-            :confirmation => true,
-            :length => { :within => 6..40 }
-
-  before_save :encrypt_password
-
-  # Return true if the user's password matches the submittted password.
-  def has_password?(submitted_password)
-    # Compare encrypted_password with the encrypted version of
-    # submitted_password
-  end
-
-  private
-  
-  def encrypt_password
-    self.encrypted_password = encrypt(password)
-  end
-
-  def encrypt(string)
-    string # Only a temporary implementation
-  end
-
+  valid_email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, presence: true, format: { with: valid_email_regex },
+  uniqueness: { case_sensitive: false }
 end

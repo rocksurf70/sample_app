@@ -35,6 +35,7 @@ GEM
     autotest (4.4.6)
       ZenTest (>= 4.4.1)
     autotest-rails-pure (4.1.2)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.0.0)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
@@ -134,6 +135,7 @@ DEPENDENCIES
   annotate
   autotest
   autotest-rails-pure
+  bcrypt-ruby
   coffee-rails (~> 3.1.1)
   jquery-rails
   rails (= 3.1.3)
