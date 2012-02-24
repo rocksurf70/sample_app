@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 gem 'bcrypt-ruby'
+gem 'gravatar_image_tag'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -27,6 +28,7 @@ group :test do
   gem 'webrat'
   gem 'autotest'
   gem 'autotest-rails-pure'
+  gem 'factory_girl_rails'
 end
 
 gem 'jquery-rails'

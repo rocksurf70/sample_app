@@ -1,0 +1,1 @@
+Listing 7.22. The user show view with name and Gravatar. 
