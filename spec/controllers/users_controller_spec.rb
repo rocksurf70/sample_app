@@ -34,13 +34,13 @@ describe UsersController do
       response.should have_selector("h1>img", :class => "gravatar")
     end
 
-    it "returns http success" do
-      get 'new'
+    it "should be successful" do
+      get :new
       response.should be_success
     end
 
     it "should have the right title" do
-      get 'new'
+      get :new
       response.should have_selector("title", :content => "Sign up")
     end
   end
